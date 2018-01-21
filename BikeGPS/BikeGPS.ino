@@ -4,7 +4,6 @@
 #include <OLEDDisplayFonts.h>
 #include <OLEDDisplayUi.h>
 #include <SSD1306.h>
-#include <SoftwareSerial.h>
 
 /**
    The mobile part that tracks the movement
@@ -26,7 +25,7 @@ String pos[2] = {"NO","FIX"};
 
 // coordinates for the UI
 int timeCoords[2] = {100, 0};
-int hdngCoords[2] = {0, 15};
+int hdngCoords[2] = {6, 15};
 int posCoords[2] = {0,50};
 
 void setup() {
@@ -78,7 +77,7 @@ void updateHdng() {
     heading = String(compassRose(gps.course.deg()));
   }
   display.setFont(ArialMT_Plain_24);
-  display.drawString(hdngCoords[0], hdngCoords[1], heading);
+  display.drawString(hdngCoords[0]+((3-heading.length())*10), hdngCoords[1], heading);
   display.setFont(ArialMT_Plain_10);
 }
 
