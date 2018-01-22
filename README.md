@@ -15,5 +15,6 @@ This system is using a GPS receiver to give the user feedback on his bike ride. 
 ## Software dependencies
 Since the main chip is based on ESP8266, ESP Arduino core is used.
 Other libraries used in this project:
+* [TinyGPS++](http://arduiniana.org/libraries/tinygpsplus/)
 * [OLED display controller (SSD1306)](https://github.com/squix78/esp8266-oled-ssd1306)
 * [ESP Software Serial](https://github.com/plerup/espsoftwareserial)
